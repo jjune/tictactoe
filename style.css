@@ -5,17 +5,15 @@
   margin-top: 100px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 50px;
   padding: 0;
   width: 600px;
   height: 600px;
-
 }
 
 .row {
   display: block;
   height: 33.33333%;
-  border-top: 5px solid black;
+  border-top: 5px solid #0A6178;
 }
 
 .row:first-child {
@@ -27,18 +25,16 @@
   display: block;
   width: 33.33333%;
   height: 100%;
-  border-left: 5px solid black;
+  border-left: 5px solid #0A6178;
 }
 
 .cell:before {
-  content: "";
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   line-height: 0;
-  font-size: 5em;
 }
 
 .cell:first-child {
@@ -46,7 +42,7 @@
 }
 
 .cell:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #B6DAF2;
 }
 
 .cell-x {
