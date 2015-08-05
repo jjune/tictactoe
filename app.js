@@ -10,7 +10,7 @@ var win_combinations = [7, 56, 448, 73, 146, 292, 273, 84];
 $('#board').on('click', ".cell:not('.cell-x, .cell-o')", function() {
 	var $current_cell = $(event.target);
 	$current_cell.addClass('cell-' + currentPlayer);
-    
+    turns++;
 
 	// Keep track of each player's score
     window[currentPlayer + '_score'] +=  parseInt(event.target.id);
@@ -22,14 +22,13 @@ $('#board').on('click', ".cell:not('.cell-x, .cell-o')", function() {
                 location.reload();
                 return false;
             }
-        };
+    };
 
     if (turns > 8) {
         alert("It's a Tie!");
         location.reload();
-        return false;
     }
         // Swap player
     currentPlayer = currentPlayer === 'x' ? 'o' : 'x';
-    turns++;
+
 });
