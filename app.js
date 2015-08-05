@@ -7,7 +7,7 @@ var turns = 0;
 var win_combinations = [7, 56, 448, 73, 146, 292, 273, 84];
 
 // Alternate players and draw shape
-$('#board').on('click', '.cell', function() {
+$('#board').on('click', ".cell:not('.cell-x, .cell-o')", function() {
 	var $current_cell = $(event.target);
 	$current_cell.addClass('cell-' + currentPlayer);
     turns++;
